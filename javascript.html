@@ -1,0 +1,158 @@
+<html>
+<head>
+    <title>JavaScript</title>
+</head>
+<style>
+    #name {
+        color: red;
+        font-size: 30px;
+        background-color: yellow;
+    }
+</style>
+<body>
+    <div id="name"></div>
+    <input type="number"  placeholder="Enter your first number" id="1stnumber">
+    <input type="number"  placeholder="Enter your second number" id="2ndnumber">
+    <button onclick="addtwonumbers()">Add Numbers</button>
+    <h2 id="result"></h2>
+
+    <input type="text"  placeholder="Enter your mark" id="mark">
+    <button onclick="checkgrade()">check grade</button>
+    <h2 id="grade-result"></h2>
+        
+    <p class="text">This is a paragraph.</p>
+    <p class="text">This is another paragraph.</p>
+
+    <h1>welcome</h1>
+    <p> JavaScript .</p>
+    <p>java</p>
+<script>
+
+    function addtwonumbers() {
+        var a = parseInt(document.getElementById("1stnumber").value);
+        var b = parseInt(document.getElementById("2ndnumber").value);
+        var result = a + b;
+        document.getElementById("result").innerHTML =result;
+    }
+     let fruit = ["apple","banana","orange"];
+     console.log(fruit[0]);
+     console.log(fruit[1]);
+    console.log(fruit[2]);
+    fruit[1]="mango";
+    console.log(fruit[1]);
+
+    fruit.push("grapes");
+    console.log(fruit);
+
+    fruit.pop();
+    console.log(fruit);
+
+    fruit.unshift("kiwi");
+    console.log(fruit);
+
+    fruit.shift();
+    console.log(fruit);
+
+    fruit.map=[1,2,3,4,5];
+    console.log(fruit.map); 
+
+    let items=document.getElementsByClassName("text");
+    items[0].style.color="red";
+    items[1].style.color="blue";
+
+    let tags=document.getElementsByTagName("p");
+    tags[0].style.fontWeight="bold";
+      
+      let age=15;
+      if(age>=18){
+        console.log("You are an adult.");
+      }
+         else{
+          console.log("You are a minor.");
+        }  
+        
+        let mark=92;
+        if(mark>=90){
+            console.log("Grade: A+");
+        }
+        else if(mark>=80){
+            console.log("Grade: A");
+        }
+        else if(mark>=70){
+            console.log("Grade: B");
+        }
+        else if(mark>=60){
+            console.log("Grade: C");
+        }
+        else if(mark>=50){
+             console.log("Grade: D");
+        }
+
+        function checkgrade() {
+        var grade = document.getElementById("mark").value;
+        var mark = parseInt(grade);
+        if(grade>=90){
+            document.getElementById("grade-result").innerHTML = "Grade: A+";
+        }
+        else if(grade>=80){
+            document.getElementById("grade-result").innerHTML = "Grade: A";
+        }
+        else if(grade>=70){
+            document.getElementById("grade-result").innerHTML = "Grade: B";
+        }
+        else if(grade>=60){
+            document.getElementById("grade-result").innerHTML = "Grade: C";
+        }
+        else if(grade>=50){
+            document.getElementById("grade-result").innerHTML = "Grade: D";
+        }
+    }
+
+    let day=7;
+    switch(day){    
+        case 1:
+            console.log("Monday");
+            break;
+        case 2:
+            console.log("Tuesday");
+            break;
+        case 3:
+            console.log("Wednesday");
+            break;
+        case 4:
+            console.log("Thursday");
+            break;
+        case 5:
+            console.log("Friday");
+            break;
+        case 6:
+            console.log("Saturday");
+            break;
+        case 7:
+            console.log("Sunday");
+            break;
+        default:
+            console.log("Invalid day");
+    }
+
+    for(let i=0; i<4; i++){
+        console.log("hello " + i);
+    }
+
+    for(let i=0; i<10; i++){
+        console.log("java " + i);
+    }
+
+    
+    let fruits=["apple","banana","orange"];
+    for(let fruit of fruits){
+        console.log(fruit);
+    }
+let c_name=["upcode"];
+    for(let s of c_name){
+        console.log(s);
+    }
+</script>
+<script src="script.js"></script> 
+</body>
+</html>
